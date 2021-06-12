@@ -4,11 +4,6 @@ import java.util.Set;
 
 import com.abhi.PetClinic.Model.Vet;
 
-public interface VetService {
+public interface VetService extends CrudService<Vet, Integer> {
 
-	Vet findById(int id);
-
-	Vet save(Vet pet);
-
-	Set<Vet> findAll();
 }
