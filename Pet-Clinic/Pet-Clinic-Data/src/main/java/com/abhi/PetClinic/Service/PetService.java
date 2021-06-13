@@ -4,6 +4,6 @@ import java.util.Set;
 
 import com.abhi.PetClinic.Model.Pet;
 
-public interface PetService extends CrudService<Pet, Integer> {
+public interface PetService extends CrudService<Pet,Long> {
 
 }
