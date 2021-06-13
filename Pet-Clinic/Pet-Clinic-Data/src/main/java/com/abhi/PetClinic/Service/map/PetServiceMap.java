@@ -4,8 +4,9 @@ import java.util.Set;
 
 import com.abhi.PetClinic.Model.Pet;
 import com.abhi.PetClinic.Service.CrudService;
+import com.abhi.PetClinic.Service.PetService;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long>{
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService{
 
 	@Override
 	public Set<Pet> findAll() {

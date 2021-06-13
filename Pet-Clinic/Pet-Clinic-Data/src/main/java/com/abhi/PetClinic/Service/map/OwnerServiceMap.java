@@ -4,8 +4,9 @@ import java.util.Set;
 
 import com.abhi.PetClinic.Model.Owner;
 import com.abhi.PetClinic.Service.CrudService;
+import com.abhi.PetClinic.Service.OwnerService;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
 	public Set<Owner> findAll() {
@@ -35,6 +36,12 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	public void deleteById(Long id) {
 		super.deleteById(id);
 		
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		
+		return null;
 	}
 
 
