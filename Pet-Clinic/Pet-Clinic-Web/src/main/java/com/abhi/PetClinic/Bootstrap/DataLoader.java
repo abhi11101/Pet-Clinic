@@ -1,6 +1,7 @@
 package com.abhi.PetClinic.Bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import com.abhi.PetClinic.Model.Owner;
 import com.abhi.PetClinic.Model.Vet;
@@ -9,6 +10,7 @@ import com.abhi.PetClinic.Service.VetService;
 import com.abhi.PetClinic.Service.map.OwnerServiceMap;
 import com.abhi.PetClinic.Service.map.VetServiceMap;
 
+@Component
 public class DataLoader implements CommandLineRunner {
 
 	private final OwnerService ownerService;
@@ -35,6 +37,8 @@ public class DataLoader implements CommandLineRunner {
 		owner.setLastName("Singh");
 		ownerService.save(owner2);
 
+		System.out.println("Owners Loaded..");
+
 		Vet vet = new Vet();
 		vet.setId(1L);
 		vet.setFirstName("Tom");
@@ -47,6 +51,7 @@ public class DataLoader implements CommandLineRunner {
 		vet.setLastName("Hanks");
 		vetService.save(vet2);
 
+		System.out.println("Vet Loaded...");
 	}
 
 }

@@ -2,11 +2,14 @@ package com.abhi.PetClinic.Service.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.abhi.PetClinic.Model.Vet;
 import com.abhi.PetClinic.Service.CrudService;
 import com.abhi.PetClinic.Service.VetService;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService{
+@Service
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
 	public Set<Vet> findAll() {
@@ -37,7 +40,5 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 		// TODO Auto-generated method stub
 		super.deleteById(id);
 	}
-	
-	
 
 }
